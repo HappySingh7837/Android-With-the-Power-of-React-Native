@@ -1,0 +1,14 @@
+rootProject.name='NativeApplication'
+//apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
+include ':app'
+include ':app', ':react-native-code-push'
+project(':react-native-code-push').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-code-push/android/app')
+
+include ':react-native-image-picker'
+project(':react-native-image-picker').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-image-picker/android')
+
+include ':react-native-share'
+project(':react-native-share').projectDir = new File(rootProject.projectDir,    '../node_modules/react-native-share/android')
+
+include ':react-native-get-location'
+project(':react-native-get-location').projectDir = new File(rootProject.projectDir,    '../node_modules/react-native-get-location/android')
